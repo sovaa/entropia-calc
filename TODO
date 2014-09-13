@@ -1,0 +1,14 @@
+FIXES
+==========
+-- * do not require a mob to be chosen to show the cost column; as long as there are values in the hp/regen inputs it should show
+-- * static header hight so g+ button doesn't shift everything when loaded
+-- * move help
+
+
+FEATURES
+==========
+* ability to show similar weapons to a selected one; if a mob is chosen, similar for hunting that mob; if no mob is chosen, just similar to that weapon
+* settings when logged in; always show/hide search filters if results; prefered language; more
+-- * add amp decay per use and amp decay per sec to result table
+* compare two or more weapons; individual amp, enhancers and skills
+* choose a fap and calculate dodge/evade/player hp/creature damage/creature crit/fap heal per sec/fap decay/etc

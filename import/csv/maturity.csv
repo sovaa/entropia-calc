@@ -1,0 +1,282 @@
+Name;Class;Rank;Description
+Single Maturity Mob;Animal;0; 
+Young;Animal;1;Immature and inexperienced offspring
+Mature;Animal;2;Fully grown with average experience
+Old;Animal;3;Weaker but very experienced
+Provider;Animal;4;A resourceful and experienced provider of their kin
+Guardian;Animal;5;Very watchful and protective of their kin
+Dominant;Animal;6;A strong high ranked creature
+Alpha;Animal;7;The strongest and most dominant creature
+Old Alpha;Animal;8;Strong, dominant and very experienced
+Prowler;Animal;9;A hungry predator on the prowl
+Stalker;Animal;10;A vicious and skillful predator
+Young Elite;Animal;11;An exceptionally strong young
+Hatchling;Animal;11;Just-spawned offspring
+Mature Elite;Animal;12;An exceptionally strong mature
+Old Elite;Animal;13; 
+Dominant Elite;Animal;14;An exceptionally strong dominant
+Alpha Elite;Animal;15; 
+Old Alpha Elite;Animal;16; 
+Prowler Elite;Animal;17; 
+Stalker Elite;Animal;18; 
+Creeper;Animal;19; 
+Elite;Animal;20; 
+Marauder;Animal;21; 
+Slayer;Animal;22; 
+Mutated;Animal;23;An insane killing machine
+Puny;Animal;24; 
+Queen;Animal;25;This powerful maturity was found via Atrox hunting
+King;Animal;26;New Royal mobs on ROCKtropia
+Matriarch;Animal;29;Traeskeron Boss Mob
+Legend;Animal;30;Uber Rocktropia HP mob
+Raging Daikiba Bull;Animal;31;Daikiba Boss Mob
+The Gosubusagi;Animal;32;Elite Gokibusagi Boss mob
+Combibo Brood Mother;Animal;33; 
+Young;Animal (Next Island);1; 
+Mature;Animal (Next Island);2; 
+Old;Animal (Next Island);3; 
+Provider;Animal (Next Island);4; 
+Leader;Animal (Next Island);5; 
+Dominant;Animal (Next Island);6; 
+Alpha;Animal (Next Island);7; 
+Old Alpha;Animal (Next Island);8; 
+Prowler;Animal (Next Island);9; 
+Stalker;Animal (Next Island);10; 
+King;Animal (Next Island);20;The last group in a Papoo wave has a King to kill
+23PED;Beacon mission;1; 
+25PED;Beacon mission;2; 
+29PED;Beacon mission;3; 
+35PED;Beacon mission;4; 
+39PED;Beacon mission;5; 
+42PED;Beacon mission;6; 
+Shy;Cyborg;0; 
+Dancer;Cyborg;1; 
+Frisky;Cyborg;2; 
+Voluptuous;Cyborg;3; 
+Drunk;Cyborg;4; 
+Bootylicious;Cyborg;5; 
+Foxy;Cyborg;6; 
+Moody;Cyborg;7; 
+Strung Out;Cyborg;8; 
+Freaky;Cyborg;9; 
+Diva;Cyborg;10; 
+Slow;Cyclops;1; 
+Defender;Cyclops;2; 
+Destroyer;Cyclops;3; 
+Defiant;Cyclops;4; 
+Mighty;Cyclops;5; 
+Angry;Cyclops;6; 
+Giant;Cyclops;7; 
+Clan Leader;Cyclops;8; 
+Blood Luster;Cyclops;9; 
+King;Cyclops;10; 
+Single Maturity Mob;Developed Mutant;0; 
+Adept;Developed Mutant;1; 
+Worker;Developed Mutant;2; 
+Gatherer;Developed Mutant;3; 
+Patron;Developed Mutant;4; 
+Thief;Developed Mutant;5; 
+Rogue;Developed Mutant;6; 
+Scavenger;Developed Mutant;7; 
+Seeker;Developed Mutant;8; 
+Looter;Developed Mutant;9; 
+Overseer;Developed Mutant;10; 
+Clan Leader;Developed Mutant;11; 
+Elite Rogue;Developed Mutant;12; 
+Elite Scavenger;Developed Mutant;13; 
+Elite Looter;Developed Mutant;14; 
+Elite Overseer;Developed Mutant;15; 
+Elite Clan Leader;Developed Mutant;16; 
+Guardian;Firewall;1; 
+Banisher;Firewall;2; 
+Protector;Firewall;3; 
+Lord;Firewall;4; 
+Alpha;Harbinger;1; 
+Beta;Harbinger;2; 
+Gamma;Harbinger;3; 
+Delta;Harbinger;4; 
+Epsilon;Harbinger;5; 
+Digamma;Harbinger;6; 
+Zeta;Harbinger;7; 
+Eta;Harbinger;8; 
+Theta;Harbinger;9; 
+Iota;Harbinger;10; 
+*;Human;0; 
+Newbie;Human;0; 
+Single Maturity;Human;1; 
+Novice;Human;3; 
+Regular;Human;5; 
+Veteran;Human;7; 
+Uber;Human;8; 
+MindArk Offical <Insert Number>;Human;9; 
+Unit RX;Human;10; 
+Single Maturity Mob;Humanoid;0; 
+Weak;Humanoid;0; 
+Agressive;Humanoid;0; 
+Howler;Humanoid;0;Specific to Werewolf
+Young;Humanoid;1;Immature and inexperienced offspring
+Adult;Humanoid;2;Fully matured individual with average experience
+Scout;Humanoid;3;Swift and cunning explorers and lookouts
+Gatherer;Humanoid;4;Minor provider of various supplies
+Guardian;Humanoid;5;Very watchful and protective of their kin
+Scavenger;Humanoid;6;Minor self-provider of opportunity
+Raider;Humanoid;7;A vicious plunderer
+Hunter;Humanoid;8;Strong and experienced providers
+Warrior;Humanoid;9;Combat ready and (almost?) always prepared
+Leader;Humanoid;10;The strongest and most fit to lead their kind
+Scavenger Elite;Humanoid;11; 
+Raider Elite;Humanoid;12; 
+Warrior Elite;Humanoid;13; 
+Leader Elite;Humanoid;14; 
+Weak;Insect;1;Immature and inexperienced offspring
+Watcher;Insect;2; 
+Soldier;Insect;3; 
+Strong;Insect;4; 
+Ravager;Insect;5; 
+Devastator;Insect;6; 
+Hunter;Insect;7; 
+Chaser;Insect;8; 
+Majestic;Insect;9; 
+Queen;Insect;10; 
+Marauder;Insect;11; 
+Slayer;Insect;12; 
+The Sand King;Insect;13;Boss Mob from Rextelum wave spawn
+Outcast;Mutant;1; 
+Bandit;Mutant;2; 
+Guard;Mutant;3; 
+Raider;Mutant;4; 
+Warrior;Mutant;5; 
+Berserker;Mutant;6; 
+Hunter;Mutant;7; 
+Warlord;Mutant;8; 
+Champion;Mutant;9; 
+Clan Warlord;Mutant;10; 
+Clan Leader;Mutant;11; 
+Hunter Elite;Mutant;12; 
+Warlord Elite;Mutant;13; 
+Champion Elite;Mutant;14; 
+Looter Elite;Mutant;14; 
+Overseer Elite;Mutant;15; 
+Clan Warlord Elite;Mutant;16; 
+Clan Leader Elite;Mutant;17; 
+Demp;Mutant;19; 
+Vigg;Mutant;20; 
+Soldier;Mutant;102;Easy to kill, but fast regeneration
+Medic;Mutant;102; 
+Captain;Mutant;103; 
+Gunner;Mutant;103; 
+Engineer;Mutant;103; 
+Thug;Oratan;1; 
+Bandit;Oratan;2; 
+Thief;Oratan;3; 
+Vandal;Oratan;4; 
+Looter;Oratan;5; 
+Menace;Oratan;6; 
+Rogue;Oratan;7; 
+Villain;Oratan;8; 
+Fiend;Oratan;9; 
+Enforcer;Oratan;10; 
+Single Maturity Mob;Robot;0;Special class - Only one maturity exists
+Gen. 01;Robot;1;1st generation of manufactured robot units
+Gen. 02;Robot;2;2nd generation of manufactured robot units
+Gen. 03;Robot;3;3rd generation of manufactured robot units
+Gen. 04;Robot;4;4th generation of manufactured robot units
+Gen. 05;Robot;5;etc
+Gen. 06;Robot;6;etc
+Gen. 07;Robot;7;etc
+Gen. 08;Robot;8;etc
+Gen. 09;Robot;9;etc
+Gen. 10;Robot;10;etc
+The Eviscerator;Robot;11;11th generation of Eviscerators
+Elite;Robot;11; 
+Mulciber;Robot;12; 
+Exterminator;Robot;12; 
+Commander 010011;Robot;13;Deadly "robot lord" for the 010011 beacon mission
+Scylla;Robot;14;Leader of the robot armies
+Lord Telleton;Robot;15; 
+Hydra;Robot;16;Named Warlock
+Hydra (Trial 6);Robot;17;Second known version of Hydra
+Hydra (Trial 7);Robot;18;Third known version of Hydra
+Hydra (Trial 9);Robot;19;Trial 9 version of Hydra
+Charybdis;Robot;20;Named Warlock
+Mega-Mouth;Rocktropia Animals;1; 
+Winklepicker;Rocktropia Humanoid;1;This winklepicker packs a punch
+Soulshaker;Rocktropia Humanoid;1; 
+Forum Troll;Rocktropia Humanoid;1; 
+Soulshaker (2);Rocktropia Humanoid;2; 
+Mulholland Boy;Rocktropia Humanoid;3; 
+Soulshaker (3);Rocktropia Humanoid;3; 
+Stereo Jacker;Rocktropia Humanoid;4; 
+ROCKtropia Beat Cop (Type 1);Rocktropia Humanoid;5; 
+Harlem Hustler;Rocktropia Humanoid;6; 
+Soulshaker (6);Rocktropia Humanoid;6; 
+SkullGang Homeboy;Rocktropia Humanoid;7; 
+Bass Monkey;Rocktropia Humanoid;8; 
+Biker;Rocktropia Humanoid;9; 
+Steampunk;Rocktropia Humanoid;9; 
+Breakdancer;Rocktropia Humanoid;10; 
+Dreamer;Rocktropia Humanoid;11; 
+ROCKtropia Beat Cop (Type 2);Rocktropia Humanoid;12; 
+ROCKER;Rocktropia Humanoid;12; 
+???;Rocktropia Humanoid;13; 
+ROCKtropia Police Captain;Rocktropia Humanoid;14; 
+Street King;Rocktropia Humanoid;15; 
+Coral Hustler;RT Sharks;1; 
+Reef Eater;RT Sharks;2; 
+Tooth Assassin;RT Sharks;3; 
+Single Maturity Mob;Skeleton;0; 
+Surgeon;Skeleton;1; 
+Striker;Skeleton;2; 
+Sea Artist;Skeleton;3; 
+Master;Skeleton;4; 
+Gunner;Skeleton;5; 
+Carpenter;Skeleton;6; 
+Cabin Boy;Skeleton;7; 
+Boatswain;Skeleton;8; 
+First Mate;Skeleton;9; 
+Quartermaster;Skeleton;10; 
+Captain;Skeleton;11;Known as ??? in first release
+v1;THING;0; 
+v2;THING;1; 
+v3;THING;2; 
+v4;THING;3; 
+v5;THING;4; 
+v6;THING;5; 
+v7;THING;6; 
+v8;THING;7; 
+v9;THING;8; 
+v10;THING;9; 
+v11;THING;10; 
+Watcher;Thorifoid;1; 
+Adept;Thorifoid;2; 
+Gatherer;Thorifoid;3; 
+Seeker;Thorifoid;4; 
+Devastator;Thorifoid;5; 
+Shaman;Thorifoid;6; 
+Elder;Thorifoid;7; 
+Dreamer;Thorifoid;8; 
+Master;Thorifoid;9; 
+Clan Elder;Thorifoid;10; 
+New Born;Vampire;1; 
+Lost One;Vampire;2; 
+Animal Eater;Vampire;3; 
+Seducer;Vampire;4; 
+Man Eater;Vampire;5; 
+Wicked;Vampire;6; 
+Starving;Vampire;7; 
+Evil;Vampire;8; 
+Blood Fiend;Vampire;9; 
+Ancient;Vampire;10; 
+Weak;WhereWolf;1; 
+Agressive;WhereWolf;2; 
+Howler;WhereWolf;3; 
+Teen;Zombie;1; 
+Adult;Zombie;2; 
+Old;Zombie;3; 
+Slow;Zombie;4; 
+Angry;Zombie;5; 
+Scavenger;Zombie;6; 
+Crazy;Zombie;7; 
+Sniffer;Zombie;8; 
+Nutcase;Zombie;9; 
+Intelligent;Zombie;10; 

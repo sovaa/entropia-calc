@@ -1,0 +1,31 @@
+Name;Item Points;Enhancer Socket;Heal Increase;Skill Increase;Decay Change;TT value;Markup;Source;Discovered
+Medical Tool Economy Enhancer I;1;1;0;0;-5;0.6;0.67 PED;Crafted;
+Medical Tool Economy Enhancer II;1;2;0;0;-5;0.6;0.87 PED;Crafted;10.6.3
+Medical Tool Economy Enhancer III;1;3;0;0;-5;0.6;0.61 PED;Crafted;
+Medical Tool Economy Enhancer IV;1;4;0;0;-5;0.6;1.92 PED;Crafted;
+Medical Tool Economy Enhancer IX;1;9;0;0;-5;0.6; ;Crafted;
+Medical Tool Economy Enhancer V;1;5;0;0;-5;0.6;1.70 PED;Crafted;10.6.6
+Medical Tool Economy Enhancer VI;1;6;0;0;-5;0.6;1.58 PED;Crafted;10.6.6
+Medical Tool Economy Enhancer VII;1;7;0;0;-5;0.6; ;Crafted;
+Medical Tool Economy Enhancer VIII;1;8;0;0;-5;0.6; ;Crafted;10.6.6
+Medical Tool Economy Enhancer X;1;10;0;0;-5;0.6; ;Crafted;
+Medical Tool Heal Enhancer I;1;1;5;0;5;0.4;0.89 PED;Crafted;10.6.6
+Medical Tool Heal Enhancer II;1;2;5;0;5;0.4;1.75 PED;Crafted;10.6.3
+Medical Tool Heal Enhancer III;1;3;5;0;5;0.4;1.65 PED;Crafted;10.6.5
+Medical Tool Heal Enhancer IV;1;4;5;0;5;0.4;1.37 PED;Crafted;
+Medical Tool Heal Enhancer IX;1;9;5;0;5;0.4; ;Crafted;
+Medical Tool Heal Enhancer V;1;5;5;0;5;0.4;1.48 PED;Crafted;10.6.6
+Medical Tool Heal Enhancer VI;1;6;5;0;5;0.4;5.52 PED;Crafted;
+Medical Tool Heal Enhancer VII;1;7;5;0;5;0.4;0.88 PED;Crafted;
+Medical Tool Heal Enhancer VIII;1;8;5;0;5;0.4;4.13 PED;Crafted;
+Medical Tool Heal Enhancer X;1;10;5;0;5;0.4;0.60 PED;Crafted;
+Medical Tool Skill Modification Enhancer I;1;1;0;0.5;0;0.6;0.72 PED;Crafted;10.6.3
+Medical Tool Skill Modification Enhancer II;1;2;0;0.5;0;0.6;1.65 PED;Crafted;
+Medical Tool Skill Modification Enhancer III;1;3;0;0.5;0;0.6;1.09 PED;Crafted;10.6.5
+Medical Tool Skill Modification Enhancer IV;1;4;0;0.5;0;0.6;0.73 PED;Crafted;10.6.5
+Medical Tool Skill Modification Enhancer IX;1;9;0;0.5;0;0.6; ;Crafted;
+Medical Tool Skill Modification Enhancer V;1;5;0;0.5;0;0.6;0.76 PED;Crafted;
+Medical Tool Skill Modification Enhancer VI;1;6;0;0.5;0;0.6; ;Crafted;
+Medical Tool Skill Modification Enhancer VII;1;7;0;0.5;0;0.6;0.55 PED;Crafted;
+Medical Tool Skill Modification Enhancer VIII;1;8;0;0.5;0;0.6; ;Crafted;
+Medical Tool Skill Modification Enhancer X;1;10;0;0.5;0;0.6; ;Crafted;
