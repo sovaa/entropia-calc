@@ -2,21 +2,13 @@
 
 if(!defined('INCLUDE_CHECK')) die('You are not allowed to execute this file directly');
 
-include('dao.php');
+require_once('dao.php');
 
 class Manager {
-  function getWeapon($id) {
-    if ($id == null) {
-      return array();
-    }
-
-    global $dao;
-
-    $rs = Dao::execute($dao, "select * from weapon where id = ?", array($id));
-    $result = null;
-
+  function pushWeaponArray($rs) {
+    $results = array();
     foreach ($rs as $value) {
-      $result = array(
+      array_push($results, array(
         'id' => $value['id'],
         'name' => $value['name'],
         'class' => $value['class'],
@@ -51,12 +43,19 @@ class Manager {
         'source' => $value['source'],
         'discovered' => $value['discovered'],
         'found' => $value['found'],
-      );
+      ));
+    }
+    return $results;
+  }
 
-      break;
+  function getWeapon($id) {
+    if ($id == null) {
+      return array();
     }
 
-    return $result;
+    global $dao;
+    $rs = Dao::execute($dao, "select * from weapon where id = ?", array($id));
+    return $this->pushWeaponArray($rs)[0];
   }
 
   function getSights() {
@@ -216,50 +215,8 @@ class Manager {
 
   function getWeapons() {
     global $dao;
-
     $rs = Dao::execute($dao, "select * from weapon order by name asc");
-    $results = array();
-
-    foreach ($rs as $value) {
-      array_push($results, array(
-        'id' => $value['id'],
-        'name' => $value['name'],
-        'class' => $value['class'],
-        'type' => $value['type'],
-        'weight' => $value['weight'],
-        'damage' => $value['damage'],
-        'range' => $value['range'],
-        'attacks' => $value['attacks'],
-        'power' => $value['power'],
-        'decay' => $value['decay'],
-        'burn' => $value['burn'],
-        'maxtt' => $value['maxtt'],
-        'mintt' => $value['mintt'],
-        'markup' => $value['markup'],
-        'uses' => $value['uses'],
-        'dmgstb' => $value['dmgstb'],
-        'dmgcut' => $value['dmgcut'],
-        'dmgimp' => $value['dmgimp'],
-        'dmgpen' => $value['dmgpen'],
-        'dmgshr' => $value['dmgshr'],
-        'dmgbrn' => $value['dmgbrn'],
-        'dmgcld' => $value['dmgcld'],
-        'dmgacd' => $value['dmgacd'],
-        'dmgelc' => $value['dmgelc'],
-        'sib' => $value['sib'],
-        'hitprof' => $value['hitprof'],
-        'hitrec' => $value['hitrec'],
-        'hitmax' => $value['hitmax'],
-        'dmgprof' => $value['dmgprof'],
-        'dmgrec' => $value['dmgrec'],
-        'dmgmax' => $value['dmgmax'],
-        'source' => $value['source'],
-        'discovered' => $value['discovered'],
-        'found' => $value['found'],
-      ));
-    }
-
-    return $results;
+    return $this->pushWeaponArray($rs);
   }
 
   function getEnergyAmps() {
@@ -322,7 +279,6 @@ class Manager {
 
   function getCreatures() {
     global $dao;
-
     $rs = Dao::execute($dao, "select * from creature where regen > 0 order by substring_index(name, ' ', 1) asc, maturity asc");
     $results = array();
 

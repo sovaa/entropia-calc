@@ -46,6 +46,7 @@ class Dao {
     }
 }
 
+global $dao;
 $dao = Dao::connect('localhost', 'goat-cheese-ham', 'one-hell-of-a-nice-password-ya-know', 'entropia_armory') or die("Error " . mysqli_error($sql));
 
 ?>

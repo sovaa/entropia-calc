@@ -14,19 +14,20 @@ define('INCLUDE_CHECK', true);
 
 $results = array();
 
-include('include/config.php');
-include(TPATH . "include/objects.php");
-include(TPATH . "include/utils.php");
-include(TPATH . "include/filter.php");
-include(TPATH . "include/merger.php");
-include(TPATH . "include/damage.php");
-include(TPATH . "include/manager.php");
-include(TPATH . "include/locale.php");
-include(TPATH . "include/init.php");
-include(TPATH . "include/calculator.php");
+include('src/include/config.php');
+include(TPATH . "src/include/objects.php");
+include(TPATH . "src/include/dao.php");
+include(TPATH . "src/include/utils.php");
+include(TPATH . "src/include/filter.php");
+include(TPATH . "src/include/merger.php");
+include(TPATH . "src/include/damage.php");
+include(TPATH . "src/include/manager.php");
+include(TPATH . "src/include/locale.php");
+include(TPATH . "src/include/init.php");
+include(TPATH . "src/include/calculator.php");
 
 function decodeInput($test, $file) {
-    return unserialize(base64_decode(file_get_contents(TPATH . "/test/$test/$file.base64")));
+    return unserialize(base64_decode(file_get_contents(TPATH . "/tests/$test/$file.base64")));
 }
 
 $success = true;
@@ -104,25 +105,34 @@ class Prefix {
     }
 }
 
-foreach($tests as $test) {
-    echo("\nTEST '$test' running...\n");
-    $success = true;
-
-    $weapon = decodeInput($test, "weapon");
-    $creature = decodeInput($test, "creature");
-    $amplifier = decodeInput($test, "amplifier");
-    $search = decodeInput($test, "search");
-    $weapon = decodeInput($test, "weapon");
-    $amplifier_fin = decodeInput($test, "amplifier_finisher");
-    $scope_and_sights = decodeInput($test, "scope_and_sights");
-    $result_expected = decodeInput($test, "result");
-
-    $calc = new Calculator();
-    $result_actual = $calc->calcWrapper($weapon, $creature, $amplifier, $amplifier_fin, $search, $scope_and_sights);
-    loop($result_expected, $result_actual, 0, new Prefix());
-
-    if ($success) {
-        echo("TEST '$test' passed!\n");
+/**
+* @backupGlobals disabled
+* @backupStaticAttributes disabled
+*/
+class SearchTests extends PHPUnit_Framework_TestCase {
+    function test_search() {
+        global $tests;
+        foreach($tests as $test) {
+            echo("\nTEST '$test' running...\n");
+            $success = true;
+    
+            $weapon = decodeInput($test, "weapon");
+            $creature = decodeInput($test, "creature");
+            $amplifier = decodeInput($test, "amplifier");
+            $search = decodeInput($test, "search");
+            $weapon = decodeInput($test, "weapon");
+            $amplifier_fin = decodeInput($test, "amplifier_finisher");
+            $scope_and_sights = decodeInput($test, "scope_and_sights");
+            $result_expected = decodeInput($test, "result");
+    
+            $calc = new Calculator();
+            $result_actual = $calc->calcWrapper($weapon, $creature, $amplifier, $amplifier_fin, $search, $scope_and_sights);
+            loop($result_expected, $result_actual, 0, new Prefix());
+        
+            if ($success) {
+                echo("TEST '$test' passed!\n");
+            }
+        }
     }
 }
 

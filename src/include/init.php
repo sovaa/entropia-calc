@@ -22,6 +22,7 @@ function checkboxToBoolean($box) {
 
 $data = $_GET;
 
+global $manager;
 $manager = new Manager();
 $creatures = $manager->getCreatures();
 $weapons = $manager->getWeapons();
