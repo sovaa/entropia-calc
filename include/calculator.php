@@ -5,7 +5,7 @@ class Calculator {
   const SIB_RELOAD_NOT_ANYMORE_MOD = 1.25;
   const TO_EFF_DMG = 0.69375; // 0.75 * 0.925; # average damage is 75%, max hit rate is 92.5%
 
-  public function calcWrapper(Weapon $weapon, $creature, $amp, $amp_fin, Search $search, $scope_and_sights) {
+  public function calcWrapper(Weapon $weapon, $creature, $amp, $amp_fin, Search $search, array $scope_and_sights) {
     global $manager;
 
     $this->adjustAttacksForTeamSize($search, $weapon);
@@ -18,7 +18,7 @@ class Calculator {
     $search->setFindFinishers(false);
     $search->setFindCreatures(false);
 
-    $results = $this->calc($weapon, $creature, $amp, $search, $scope_and_sights);
+    $results = $this->calc($weapon, $creature, $amp, $search);
 
     if ($results == null) {
       return null;
@@ -34,7 +34,7 @@ class Calculator {
     if ($search->getFindFinishers() && $creature != null) {
       $hp_left = $results['details']['lost_damage_in_overkill'];
 
-      $finishers = $this->calculateFinishers($weapon, $creature, $hp_left, $amp_fin, $search, $scope_and_sights);
+      $finishers = $this->calculateFinishers($weapon, $creature, $hp_left, $amp_fin, $search);
 
       $results['details']['amp-laser-fin-id'] = $this->from_array($amp_fin, 'Laser', 'id');
       $results['details']['amp-blp-fin-id'] = $this->from_array($amp_fin, 'BLP', 'id');
@@ -56,13 +56,13 @@ class Calculator {
     }
 
     if ($search->getFindAmplifiers()) {
-        $amps = $this->calculateOtherAmps($weapon, $creature, $amp, $search, $scope_and_sights);
+        $amps = $this->calculateOtherAmps($weapon, $creature, $amp, $search);
     }
     
     $other_creatures = array();
     if ($search->getFindCreatures()) {
         $all_creatures = $manager->getCreatures();
-        $other_creatures = $this->calculateCreatures($weapon, $all_creatures, $amp, $search, $scope_and_sights);
+        $other_creatures = $this->calculateCreatures($weapon, $all_creatures, $amp, $search);
     }
 
     $results['details']['finishers'] = $finishers;
@@ -72,7 +72,7 @@ class Calculator {
     return $results;
   }
 
-  private function calc(Weapon $_weapon, $_creature, $_amplifiers, Search $_search) {
+  private function calc(Weapon $_weapon, array $_creature, array $_amplifiers, Search $_search) {
       $search = clone $_search;
       $weapon = clone $_weapon;
       $amplifiers = $this->cloneAmplifiers($_amplifiers);
@@ -81,7 +81,7 @@ class Calculator {
       return $this->calcWithClonedArguments($weapon, $amplifiers, $search, $creature);
   }
 
-  private function calcWithClonedArguments(Weapon $weapon, $amplifiers, Search $search, Creature $creature = null) {
+  private function calcWithClonedArguments(Weapon $weapon, array $amplifiers, Search $search, Creature $creature = null) {
     // only used to show the original weapon damage
     $weapon_damage = $weapon->getDamage();
 
@@ -747,7 +747,7 @@ class Calculator {
       );
   }
   
-  private function creatureReturn($final, Weapon $weapon, Creature $creature) {
+  private function creatureReturn(array $final, Weapon $weapon, Creature $creature) {
         $cost = $final['cost'];
         $cost_per_sec = $final['cost_per_sec'];
         #$overkill_cost = $final['overkill_cost'];
@@ -803,7 +803,7 @@ class Calculator {
       return -(($hp - $hp * pow($reg/$dps, 50000)) / ($reg - $dps));
   }
   
-  function calculateCreatures(Weapon $_weapon, $_creatures, $_amp, Search $search, $_scope_and_sights) {
+  function calculateCreatures(Weapon $_weapon, array $_creatures, array $_amp, Search $search) {
       $other_creatures = array();
         
       $_search = clone $search;
@@ -812,7 +812,7 @@ class Calculator {
       $_search->setFindCreatures(true);
         
       foreach ($_creatures as $creature) {
-          $other = $this->calc($_weapon, $creature, $_amp, $_search, $_scope_and_sights);
+          $other = $this->calc($_weapon, $creature, $_amp, $_search);
             
           if ($other == null) {
               continue;
@@ -824,7 +824,7 @@ class Calculator {
       return $other_creatures;
   }
 
-  function calculateOtherAmps(Weapon $_weapon, $creature, $amp, Search $search, $_scope_and_sights) {
+  function calculateOtherAmps(Weapon $_weapon, array $creature, array $amp, Search $search) {
     global $manager;
 
     $amps = null;
@@ -857,7 +857,7 @@ class Calculator {
       $_search->setFindFinishers(false);
       $_search->setFindAmplifiers(true);
       
-      $cost = $this->calc($weapon, $creature, $amp_array, $_search, $_scope_and_sights);
+      $cost = $this->calc($weapon, $creature, $amp_array, $_search);
 
       if ($cost != null) {
           array_push($other_amps, $cost);
@@ -867,7 +867,7 @@ class Calculator {
     return $other_amps;
   }
 
-  function calculateFinishers($current_weapon, $_creature, $hp_left, $amp, Search $search, $_scope_and_sights) {
+  function calculateFinishers($current_weapon, $_creature, $hp_left, array $amp, Search $search) {
     global $weapons;
 
     $creature = $_creature;
@@ -896,7 +896,7 @@ class Calculator {
 
       // TODO: markup
 
-      $cost = $this->calc($weapon, $creature, $amp, $_search, $_scope_and_sights);
+      $cost = $this->calc($weapon, $creature, $amp, $_search);
 
       if ($cost != null) {
         array_push($finishers, $cost);
@@ -906,11 +906,17 @@ class Calculator {
     return $finishers;
   }
 
-  private function getAmpDamage(Amplifier $amp) {
+  private function getAmpDamage(Amplifier $amp = null) {
+      if ($amp == null) {
+          return 0;
+      }
       return $amp->getDamage();
   }
 
-  private function getAmpId(Amplifier $amp) {
+  private function getAmpId(Amplifier $amp = null) {
+      if ($amp == null) {
+          return -1;
+      }
       return $amp->getId();
   }
 

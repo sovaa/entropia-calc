@@ -1,5 +1,7 @@
 <?php
 
+require_once("init.php");
+
 function getCreature(Manager $manager, $data, $hp, $regen) {
     $creature = array();
 
@@ -41,6 +43,7 @@ if (isset($data['creature'])) {
   $amplifier['BLP'] = getAmplifier($amp_markup, $data['amp_blp']);
   $amplifier['Laser'] = getAmplifier($amp_markup, $data['amp_energy']);
 
+  /*
   if ($amplifier['Laser'] != null) {
     $seaid = $amplifier['Laser']->getId();
   }
@@ -48,6 +51,7 @@ if (isset($data['creature'])) {
   if ($amplifier['BLP'] != null) {
     $sbaid = $amplifier['BLP']->getId();
   }
+  */
 
   $scope_and_sights = array();
   $scope_and_sights['scope'] = getScope($selected_scope_id);
