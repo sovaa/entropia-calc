@@ -1,5 +1,5 @@
-entropia-calc
-=============
+Entropia Armory
+===============
 
 Hunting economy calculator for Entropia Universe.
 
