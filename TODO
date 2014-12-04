@@ -3,6 +3,7 @@ FIXES
 -- * do not require a mob to be chosen to show the cost column; as long as there are values in the hp/regen inputs it should show
 -- * static header hight so g+ button doesn't shift everything when loaded
 -- * move help
+-- don't require selected creature for "find creatures" to work
 
 FEATURES
 ==========
