@@ -1,6 +1,10 @@
 <?php
 
-DEFINE('PATH', $_SERVER['DOCUMENT_ROOT'] . '/entropia/');
+$__dir = dirname($_SERVER['PHP_SELF']);
+$__dirs = explode('/', $__dir);
+$__subdir = $__dirs[1];
+
+DEFINE('PATH', $_SERVER['DOCUMENT_ROOT'] . "/$__subdir/");
 DEFINE('MAX_FINISHERS', 20);
 DEFINE('MAX_OTHER_CREATURES', 100);
 DEFINE('USE_HEALING', false);

@@ -55,7 +55,8 @@ class Manager {
 
     global $dao;
     $rs = Dao::execute($dao, "select * from weapon where id = ?", array($id));
-    return $this->pushWeaponArray($rs)[0];
+    $results = $this->pushWeaponArray($rs);
+    return $results[0];
   }
 
   function getSights() {
