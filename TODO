@@ -4,7 +4,6 @@ FIXES
 -- * static header hight so g+ button doesn't shift everything when loaded
 -- * move help
 
-
 FEATURES
 ==========
 * ability to show similar weapons to a selected one; if a mob is chosen, similar for hunting that mob; if no mob is chosen, just similar to that weapon
