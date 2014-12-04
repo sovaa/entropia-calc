@@ -4,3 +4,5 @@
 build/
 cache.properties
 phpcs-checkstyle.tmp
+deploy.php
+src/deploy.php
