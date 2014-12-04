@@ -4,6 +4,7 @@ FIXES
 -- * static header hight so g+ button doesn't shift everything when loaded
 -- * move help
 -- don't require selected creature for "find creatures" to work
+-- add unit tests :)
 
 FEATURES
 ==========
