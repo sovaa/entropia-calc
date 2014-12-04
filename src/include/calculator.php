@@ -72,7 +72,7 @@ class Calculator {
     return $results;
   }
 
-  private function calc(Weapon $_weapon, array $_creature, array $_amplifiers, Search $_search) {
+  private function calc(Weapon $_weapon, array $_creature = null, array $_amplifiers, Search $_search) {
       $search = clone $_search;
       $weapon = clone $_weapon;
       $amplifiers = $this->cloneAmplifiers($_amplifiers);
